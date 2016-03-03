@@ -41,16 +41,16 @@ button{
 	overflow: hidden;
 }
 .tile{
-	width: 25%;
 	height: 30%;
-	padding:10%;
+	width: 25%;
+	padding:5px;
 	box-sizing: border-box;
 	position: relative;
 	float:left;
 	border: 5px solid #fff;
 }
 
-.back,.front{
+.back, .front{
 	position:absolute;
 	top:0;
 	left:0;
@@ -60,7 +60,6 @@ button{
 }
 
 .back{
-
 	position:absolute;
 	top:0;
 	left:0;
