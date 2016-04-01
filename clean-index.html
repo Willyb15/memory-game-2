@@ -1,108 +1,107 @@
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="clean-styles.css">
-</head>
-<body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Memory Game!</title>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
+        <link rel="stylesheet" href="clean-styles.css">
+    </head>
+    <body>
 
-<div id="header">
-		<div id="left-header">
-			<div class="header-text">Level: 1</div>
-			<div class="header-text">Moves: 0</div>
-		</div>
+    <div id="header">
+        <div id="left-header">
+            <div class="header-text">Level: 1</div>
+            <div class="header-text">Moves: 0</div>
+        </div>
+        <div id="right-header">
+            <button onclick="restart()">Start Over</button>
+        </div>
+    </div>
 
-		<div id="right header">
-		<!-- need to add onclick -->
-			<button type="" onclick="restart();">Start Over</button>
-		</div>
-</div>
+    <div id="game-wrapper">
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-03.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-04.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-02.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-05.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-01.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-06.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-07.png">
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="inside-tile unmatched" onclick="flip(this);">
+                <div class="back"></div>
+                <div class="front">
+                    <img src="img/default/monsters-08.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function flip(element){
+            element.children[0].style.display = 'none'; 
+            element.children[1].style.display = 'block';        
+        }
+        function restart(){
+            var back = document.getElementsByClassName('back');
+            for (var i = 0; i < back.length; i++) {
+               // list[i] is a node with the desired class name
+               back[i].style.display = 'block';
+            }
+            
+            var front = document.getElementsByClassName('front');
+            for (var i = 0; i < back.length; i++) {
+                front[i].style.display = 'none';
+            }
+        }
+    </script>
 
-<div id="game-wrapper">
 
-	<div class="tile">
-		<div class="inside-tile" onclick="flip(this);">
-			<div class="back"></div>
-			<div class="front"><img src=http://vignette3.wikia.nocookie.net/parody/images/c/cd/Young_simba_lion_king.png/revision/latest?cb=20150125233927></div>
-				
-		</div>
-	</div>
-	<div class="tile">
-		<div class="inside-tile" onclick="flip(this);">
-			<div class="back"></div>
-			<div class="front"><img src=https://upload.wikimedia.org/wikipedia/en/4/4d/Scar_lion_king.png></div>
-				
-		</div>
-
-	</div>
-	<div class="tile">
-		<div class="inside-tile" onclick="flip(this);">
-			<div class="back"></div>
-			<div class="front"><img src="http://vignette1.wikia.nocookie.net/lionking/images/3/31/KH_Rafiki.png/revision/latest?cb=20130805171905"></div>
-				
-		</div>
-	</div>
-	<div class="tile">
-		<div class="inside-tile" onclick="flip(this);">
-			<div class="back"></div>
-			<div class="front"><img src="http://vignette3.wikia.nocookie.net/lionking/images/8/81/KH_Timon.png/revision/latest?cb=20130805172120"></div>
-				
-		</div>
-	</div>
-	<div class="tile">
-		<div class="inside-tile" onclick="flip(this);">
-			<div class="back"></div>
-			<div class="front"><img src=http://vignette3.wikia.nocookie.net/fanfictiondisney/images/9/9e/Pumba_3.jpg/revision/latest?cb=20120708163413></div>
-				
-		</div>
-	</div>
-	<div class="tile">
-		<div class="inside-tile" onclick="flip(this);">
-			<div class="back"></div>
-			<div class="front"><img src="http://vignette2.wikia.nocookie.net/lionking/images/3/32/KH_Mufasa.png/revision/latest?cb=20130805171741"></div>
-				
-		</div>
-	</div>	
-	<div class="tile">
-		<div class="inside-tile" onclick="flip(this);">
-			<div class="back"></div>
-			<div class="front"><img src="http://www.lionking.org/imgarchive/Clip_Art/banzai01.gif"></div>
-				
-		</div>
-	</div>
-	<div class="tile">
-		<div class="inside-tile" onclick="flip(this);">
-			<div class="back"></div>
-			<div class="front"><img src="http://vignette2.wikia.nocookie.net/lionking/images/5/52/KH_Nala.png/revision/latest?cb=20130805171808"></div>	
-		</div>
-	</div>
-</div>
-			
-	
-<script type= "text/javascript">
-	function flip(element){
-		//console.dir(element.children[0]);	        //or statement allows "single click" on refresh not double 
-		if((element.children[0].style.display == "block")||(element.children[0].style.display == "")){
-			element.children[0].style.display = "none";
-		    element.children[1].style.display = "block";
-		}else{
-			element.children[0].style.display = "block";
-			element.children[1].style.display = "none";
-		}
-	}
-	
-	function restart(){
-		var back = document.getElementsByClassName("back");
-		for(i=0; i<back.length; i++){
-			back[i].style.display= "block";
-		}
-		console.log(back);
-			
-		var front = document.getElementsByClassName("front");
-		for(i=0; i<front.length; i++){
-			front[i].style.display= "none";
-		}
-		console.log(front);
-	}
-</script>
-</body>
+    </body>
 </html>
